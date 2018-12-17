@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	   http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd
+	   http://www.springframework.org/schema/mvc
+	   http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+	   http://www.springframework.org/schema/context
+	   http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	   http://www.springframework.org/schema/tx
+	   http://www.springframework.org/schema/tx/spring-tx.xsd
+	   http://www.springframework.org/schema/aop
+	   http://www.springframework.org/schema/aop/spring-aop.xsd
+	   http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd"
+
+       profile="production">
+
+    <context:component-scan base-package="com.oneshoppoint.yates" />
+    <context:annotation-config />
+    <mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/medic/**" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/customer/**" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/images/**" location="file:${catalina.home}/yates/images/" cache-period="31556926"/>
+    <mvc:annotation-driven />
+
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>file:${user.home}/yates/yates.properties</value>
+            </list>
+        </property>
+
+        <property name="ignoreResourceNotFound" value="true" />
+        <property name="searchSystemEnvironment" value="true" />
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+    </bean>
+
+    <bean id="locationDao" class="com.oneshoppoint.yates.repository.impl.GenericRecursiveDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.Location"/>
+    </bean>
+    <bean  id="permissionDao" class="com.oneshoppoint.yates.repository.impl.GenericDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.Permission"/>
+    </bean>
+    <bean id="categoryDao" class="com.oneshoppoint.yates.repository.impl.GenericRecursiveDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.Category"/>
+    </bean>
+    <bean id="manufacturerDao" class="com.oneshoppoint.yates.repository.impl.GenericDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.Manufacturer"/>
+    </bean>
+    <bean id="prescriptionDao" class="com.oneshoppoint.yates.repository.impl.GenericDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.PrescriptionItem"/>
+    </bean>
+    <bean id="innDao" class="com.oneshoppoint.yates.repository.impl.GenericDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.Inn"/>
+    </bean>
+    <bean id="dosageFormDao" class="com.oneshoppoint.yates.repository.impl.GenericDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.DosageForm"/>
+    </bean>
+    <bean id="carrierDao" class="com.oneshoppoint.yates.repository.impl.GenericDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.Carrier"/>
+    </bean>
+    <bean id="carrierPlanDao" class="com.oneshoppoint.yates.repository.impl.GenericDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.CarrierPlan"/>
+    </bean>
+    <bean id="featureDao" class="com.oneshoppoint.yates.repository.impl.GenericDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.Feature"/>
+    </bean>
+    <bean id="medicDao" class="com.oneshoppoint.yates.repository.impl.GenericDaoImpl">
+        <constructor-arg  value="com.oneshoppoint.yates.model.Medic"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.user}" />
+        <property name="password" value="${jdbc.password}" />
+    </bean>
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="jpaPropertyMap" >
+            <map>
+                <entry key="hibernate.dialect" value="${hibernate.dialect}" />
+                <entry key="hibernate.hbm2ddl.auto" value="update" />
+                <entry key="hibernate.show_sql" value="true"/>
+                <entry key="hibernate.format_sql" value="true" />
+            </map>
+        </property>
+        <property name="persistenceProviderClass" value="org.hibernate.ejb.HibernatePersistence" />
+        <!--<property name="persistenceProviderClass" value="org.hibernate.jpa.HibernatePersistenceProvider" />-->
+        <property name="dataSource" ref ="dataSource" />
+        <property name="packagesToScan" value="com.oneshoppoint.yates" />
+    </bean>
+    <bean id="entityManager"
+          class="org.springframework.orm.jpa.support.SharedEntityManagerBean">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <bean id="currentUser" class="com.oneshoppoint.yates.util.CurrentUser" scope="session">
+        <aop:scoped-proxy/>
+    </bean>
+    <bean id="cart" class="com.oneshoppoint.yates.util.PublicStorage" scope="session">
+        <aop:scoped-proxy/>
+    </bean>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <security:global-method-security secured-annotations="enabled" pre-post-annotations="enabled"/>
+    <task:annotation-driven executor="myExecutor" scheduler="myScheduler"/>
+    <task:executor id="myExecutor" pool-size="5"/>
+    <task:scheduler id="myScheduler" pool-size="10"/>
+</beans>

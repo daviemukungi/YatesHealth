@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringSecurityFiltersConfiguredInspection -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd"
+
+       profile="development">
+
+    <security:authentication-manager>
+        <security:authentication-provider user-service-ref="jdbcDaoImpl">
+            <security:password-encoder ref="encoder"/>
+        </security:authentication-provider>
+    </security:authentication-manager>
+    <security:http pattern="/favicon.ico" security="none"/>
+    <security:http pattern="/auth" security="none"/>
+    <security:http pattern="/resources/**" security="none"/>
+    <security:http pattern="/" security="none"/>
+
+    <security:http auto-config="true">
+        <security:http-basic/>
+        <security:form-login  login-page="/login" authentication-failure-url="/login?login_error" authentication-success-handler-ref="CustomAuthenticationSuccessHandler" always-use-default-target="true"/>
+        <security:intercept-url pattern="/admin" access="ROLE_ADMIN"/>
+        <security:intercept-url pattern="/customer" access="ROLE_CUSTOMER"/>
+        <security:intercept-url pattern="/medic" access="ROLE_MEDIC"/>
+        <security:intercept-url pattern="/retailer" access="ROLE_RETAILER"/>
+        <security:intercept-url pattern="/carrier" access="ROLE_CARRIER"/>
+        <security:session-management/>
+    </security:http>
+
+    <bean id="CustomAuthenticationSuccessHandler" class="com.oneshoppoint.yates.security.CustomUrlAuthenticationSuccessHandler" />
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+            </list>
+        </property>
+
+        <property name="ignoreResourceNotFound" value="true" />
+        <property name="searchSystemEnvironment" value="true" />
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+    </bean>
+
+    <bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="password" value="${jdbc.password}" />
+        <property name="username" value="${jdbc.user}" />
+    </bean>
+
+    <bean id="jdbcDaoImpl" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+        <property name="enableAuthorities" value="true" />
+        <property name="dataSource" ref="dataSource" />
+        <property name="usersByUsernameQuery" value="select a.email as username,s.password,s.enabled,s.id from users s inner join addresses a on (s.primary_address_id = a.id) WHERE a.email = ? AND s.deleted_by IS NULL AND s.deleted_on IS NULL" />
+        <property name="authoritiesByUsernameQuery" value="select a.email as username,p.name as role from users s inner join addresses a on (s.primary_address_id = a.id )inner join user_permissions up on (s.id = up.user_id) inner join permissions p on (up.permission_id = p.id) WHERE a.email = ? AND s.deleted_by IS NULL AND s.deleted_on IS NULL"/>
+    </bean>
+
+    <bean id="webSecurityExpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+
+</beans>

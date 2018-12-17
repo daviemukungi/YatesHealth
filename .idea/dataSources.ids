@@ -1,0 +1,1787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ecommerce@localhost" uuid="2e46fe91-f333-460a-af71-41ead7719144">
+    <database-info product="MySQL" version="5.7.13-0ubuntu0.16.04.2" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="ecommerce"/>
+      <table id="2" parent="1" name="addresses"/>
+      <table id="3" parent="1" name="affiliates"/>
+      <table id="4" parent="1" name="allowed_inns"/>
+      <table id="5" parent="1" name="allowed_manufacturers"/>
+      <table id="6" parent="1" name="carrier_plans"/>
+      <table id="7" parent="1" name="carrier_rates"/>
+      <table id="8" parent="1" name="carriers"/>
+      <table id="9" parent="1" name="categories"/>
+      <table id="10" parent="1" name="customers"/>
+      <table id="11" parent="1" name="dosage_forms"/>
+      <table id="12" parent="1" name="feature_values"/>
+      <table id="13" parent="1" name="features"/>
+      <table id="14" parent="1" name="images"/>
+      <table id="15" parent="1" name="inn_to_dosage_form"/>
+      <table id="16" parent="1" name="inns"/>
+      <table id="17" parent="1" name="items"/>
+      <table id="18" parent="1" name="locations"/>
+      <table id="19" parent="1" name="manufacturers"/>
+      <table id="20" parent="1" name="medic_types"/>
+      <table id="21" parent="1" name="medics"/>
+      <table id="22" parent="1" name="orders"/>
+      <table id="23" parent="1" name="patients"/>
+      <table id="24" parent="1" name="permissions"/>
+      <table id="25" parent="1" name="prescription_items"/>
+      <table id="26" parent="1" name="prescriptions"/>
+      <table id="27" parent="1" name="products"/>
+      <table id="28" parent="1" name="retailers"/>
+      <table id="29" parent="1" name="stocks"/>
+      <table id="30" parent="1" name="user_permissions"/>
+      <table id="31" parent="1" name="users"/>
+      <column id="32" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="33" parent="2" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="34" parent="2" name="phoneNumber">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="35" parent="2" name="residentialName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="36" parent="2" name="streetAddress">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="37" parent="2" name="location_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="38" parent="2" name="customer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="39" parent="2" name="FK_axs6uyyr900dc3gkocxk5qfcc">
+        <columns>location_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="40" parent="2" name="FK_j9g1gwa3r8w97xent2b3qnced">
+        <columns>customer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="41" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="42" parent="2" name="FK_axs6uyyr900dc3gkocxk5qfcc">
+        <columns>location_id</columns>
+        <ref-key>~.locations.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="43" parent="2" name="FK_j9g1gwa3r8w97xent2b3qnced">
+        <columns>customer_id</columns>
+        <ref-key>~.customers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="44" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="45" parent="3" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="46" parent="3" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="47" parent="3" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="48" parent="3" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="49" parent="3" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="50" parent="3" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="51" parent="3" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="52" parent="3" name="pharmacist">
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="53" parent="3" name="carrier_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="54" parent="3" name="image_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="55" parent="3" name="retailer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="56" parent="3" name="FK_63rjv99cfjivpasgvs77qvlpg">
+        <columns>retailer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="57" parent="3" name="FK_jewkrkrhxoc8vsg20llmsg563">
+        <columns>image_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="58" parent="3" name="FK_r7k4lldorh97olxlp01c3a0uf">
+        <columns>carrier_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="59" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="60" parent="3" name="FK_63rjv99cfjivpasgvs77qvlpg">
+        <columns>retailer_id</columns>
+        <ref-key>~.retailers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="61" parent="3" name="FK_jewkrkrhxoc8vsg20llmsg563">
+        <columns>image_id</columns>
+        <ref-key>~.images.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="62" parent="3" name="FK_r7k4lldorh97olxlp01c3a0uf">
+        <columns>carrier_id</columns>
+        <ref-key>~.carriers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="63" parent="4" name="medic_type_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="64" parent="4" name="inn_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="65" parent="4" name="FK_1rapullbum4sn5qoi98gukxyh">
+        <columns>inn_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="66" parent="4" name="PRIMARY">
+        <columns>medic_type_id
+inn_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="67" parent="4" name="FK_1rapullbum4sn5qoi98gukxyh">
+        <columns>inn_id</columns>
+        <ref-key>~.inns.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="68" parent="4" name="FK_q44777rlh3om1cj690jfg0am1">
+        <columns>medic_type_id</columns>
+        <ref-key>~.medic_types.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="69" parent="5" name="retailer_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="70" parent="5" name="manufacturer_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="71" parent="5" name="FK_k5ekeb0278vkwp813fjepvkys">
+        <columns>manufacturer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="72" parent="5" name="FK_m5fvn228fwbq3don8evrnah8i">
+        <columns>retailer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <foreign-key id="73" parent="5" name="FK_k5ekeb0278vkwp813fjepvkys">
+        <columns>manufacturer_id</columns>
+        <ref-key>~.manufacturers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="74" parent="5" name="FK_m5fvn228fwbq3don8evrnah8i">
+        <columns>retailer_id</columns>
+        <ref-key>~.retailers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="75" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="76" parent="6" name="baseWeight">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="77" parent="6" name="exceedCharge">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="78" parent="6" name="exceedWeight">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="79" parent="6" name="maximumPackSize">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="80" parent="6" name="maximumWeight">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="81" parent="6" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="82" parent="6" name="shippingFactor">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="83" parent="6" name="carrier_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="84" parent="6" name="FK_8quju0yti1hoj981w7ypwpbd8">
+        <columns>carrier_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="85" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="86" parent="6" name="FK_8quju0yti1hoj981w7ypwpbd8">
+        <columns>carrier_id</columns>
+        <ref-key>~.carriers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="87" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="88" parent="7" name="exceedCharge">
+        <data-type>double</data-type>
+      </column>
+      <column id="89" parent="7" name="exceedWeight">
+        <data-type>double</data-type>
+      </column>
+      <column id="90" parent="7" name="price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="91" parent="7" name="destination_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="92" parent="7" name="origin_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="93" parent="7" name="carrier_plan_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="94" parent="7" name="FK_1jfw5loymogbbkh4u52bak8o5">
+        <columns>origin_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="95" parent="7" name="FK_3v49u8bs8hc450j0yfewssh2x">
+        <columns>destination_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="96" parent="7" name="FK_c7jdhqfs47t049n7jo0vetw19">
+        <columns>carrier_plan_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="97" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="98" parent="7" name="FK_1jfw5loymogbbkh4u52bak8o5">
+        <columns>origin_id</columns>
+        <ref-key>~.locations.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="99" parent="7" name="FK_3v49u8bs8hc450j0yfewssh2x">
+        <columns>destination_id</columns>
+        <ref-key>~.locations.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="100" parent="7" name="FK_c7jdhqfs47t049n7jo0vetw19">
+        <columns>carrier_plan_id</columns>
+        <ref-key>~.carrier_plans.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="101" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="102" parent="8" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="103" parent="8" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="104" parent="8" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="105" parent="8" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="106" parent="8" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="107" parent="8" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="108" parent="8" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="109" parent="8" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="110" parent="8" name="pay_bill_no">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="111" parent="8" name="address_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="112" parent="8" name="image_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="113" parent="8" name="FK_br8svgma039vguq1imurk2k8p">
+        <columns>image_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="114" parent="8" name="FK_ghkm9cx6l7bdxdflxan3mbaqx">
+        <columns>address_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="115" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="116" parent="8" name="FK_br8svgma039vguq1imurk2k8p">
+        <columns>image_id</columns>
+        <ref-key>~.images.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="117" parent="8" name="FK_ghkm9cx6l7bdxdflxan3mbaqx">
+        <columns>address_id</columns>
+        <ref-key>~.addresses.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="118" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="119" parent="9" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="120" parent="9" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="121" parent="9" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="122" parent="9" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="123" parent="9" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="124" parent="9" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="125" parent="9" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="126" parent="9" name="description">
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <column id="127" parent="9" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="128" parent="9" name="root">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="129" parent="9" name="image_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="130" parent="9" name="parent_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="131" parent="9" name="FK_2n3awjv8ah4gl5ca1bq26sori">
+        <columns>parent_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="132" parent="9" name="FK_6b3bn760mqxmhflt089q8ba00">
+        <columns>image_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="133" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="134" parent="9" name="FK_2n3awjv8ah4gl5ca1bq26sori">
+        <columns>parent_id</columns>
+        <ref-key>PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="135" parent="9" name="FK_6b3bn760mqxmhflt089q8ba00">
+        <columns>image_id</columns>
+        <ref-key>~.images.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="136" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="137" parent="10" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="138" parent="10" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="139" parent="10" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="140" parent="10" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="141" parent="10" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="142" parent="10" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="143" parent="10" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="144" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="145" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="146" parent="11" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="147" parent="11" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="148" parent="11" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="149" parent="11" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="150" parent="11" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="151" parent="11" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="152" parent="11" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="153" parent="11" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="154" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="155" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="156" parent="12" name="val">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="157" parent="12" name="feature_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="158" parent="12" name="product_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="159" parent="12" name="FK_8wuqhyscefmo0le710b8gswph">
+        <columns>product_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="160" parent="12" name="FK_p20ip66rd25iubafobgcdmwj7">
+        <columns>feature_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="161" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="162" parent="12" name="FK_8wuqhyscefmo0le710b8gswph">
+        <columns>product_id</columns>
+        <ref-key>~.products.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="163" parent="12" name="FK_p20ip66rd25iubafobgcdmwj7">
+        <columns>feature_id</columns>
+        <ref-key>~.features.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="164" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="165" parent="13" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="166" parent="13" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="167" parent="13" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="168" parent="13" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="169" parent="13" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="170" parent="13" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="171" parent="13" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="172" parent="13" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="173" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="174" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="175" parent="14" name="path">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="176" parent="14" name="product_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="177" parent="14" name="FK_jvinkc7xcd0x0pk49c1me6hb6">
+        <columns>product_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="178" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="179" parent="14" name="FK_jvinkc7xcd0x0pk49c1me6hb6">
+        <columns>product_id</columns>
+        <ref-key>~.products.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="180" parent="15" name="inn_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="181" parent="15" name="dosage_form_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="182" parent="15" name="FK_fwe4n1dpq84o9x6oq2sr9g4p">
+        <columns>dosage_form_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="183" parent="15" name="PRIMARY">
+        <columns>inn_id
+dosage_form_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="184" parent="15" name="FK_b3q8scrpil9q0yf0t19ioycvl">
+        <columns>inn_id</columns>
+        <ref-key>~.inns.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="185" parent="15" name="FK_fwe4n1dpq84o9x6oq2sr9g4p">
+        <columns>dosage_form_id</columns>
+        <ref-key>~.dosage_forms.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="186" parent="16" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="187" parent="16" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="188" parent="16" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="189" parent="16" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="190" parent="16" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="191" parent="16" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="192" parent="16" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="193" parent="16" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="194" parent="16" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="195" parent="16" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="196" parent="17" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="197" parent="17" name="UUID">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="198" parent="17" name="medical">
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="199" parent="17" name="quantity">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="200" parent="17" name="type">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="201" parent="17" name="customer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="202" parent="17" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="203" parent="17" name="FK_d334s37seid3dq21xc7jf0i34">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="204" parent="17" name="FK_gm61uhgm8pbkk5e756h62ajid">
+        <columns>customer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="205" parent="17" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="206" parent="17" name="FK_d334s37seid3dq21xc7jf0i34">
+        <columns>user_id</columns>
+        <ref-key>~.customers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="207" parent="17" name="FK_gm61uhgm8pbkk5e756h62ajid">
+        <columns>customer_id</columns>
+        <ref-key>~.customers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="208" parent="18" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="209" parent="18" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="210" parent="18" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="211" parent="18" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="212" parent="18" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="213" parent="18" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="214" parent="18" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="215" parent="18" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="216" parent="18" name="label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="217" parent="18" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="218" parent="18" name="root">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="219" parent="18" name="parent_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="220" parent="18" name="FK_s1jj1ho0np4p11c45cp1s6cw7">
+        <columns>parent_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="221" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="222" parent="18" name="FK_s1jj1ho0np4p11c45cp1s6cw7">
+        <columns>parent_id</columns>
+        <ref-key>PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="223" parent="19" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="224" parent="19" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="225" parent="19" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="226" parent="19" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="227" parent="19" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="228" parent="19" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="229" parent="19" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="230" parent="19" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="231" parent="19" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="232" parent="19" name="address_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="233" parent="19" name="image_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="234" parent="19" name="FK_nns4lbj8e5sv7iddrq4xrfxjs">
+        <columns>image_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="235" parent="19" name="FK_qtf0wyklvswmwqeecuu8e9kvh">
+        <columns>address_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="236" parent="19" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="237" parent="19" name="FK_nns4lbj8e5sv7iddrq4xrfxjs">
+        <columns>image_id</columns>
+        <ref-key>~.images.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="238" parent="19" name="FK_qtf0wyklvswmwqeecuu8e9kvh">
+        <columns>address_id</columns>
+        <ref-key>~.addresses.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="239" parent="20" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="240" parent="20" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="241" parent="20" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="242" parent="20" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="243" parent="20" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="244" parent="20" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="245" parent="20" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="246" parent="20" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="247" parent="20" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="248" parent="20" name="address_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="249" parent="20" name="token">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="250" parent="20" name="token_time">
+        <data-type>datetime</data-type>
+      </column>
+      <index id="251" parent="20" name="FK_7fp70s52khm6mmgb1qsp7i4yy">
+        <columns>address_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="252" parent="20" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="253" parent="20" name="FK_7fp70s52khm6mmgb1qsp7i4yy">
+        <columns>address_id</columns>
+        <ref-key>~.addresses.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="254" parent="21" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="255" parent="21" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="256" parent="21" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="257" parent="21" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="258" parent="21" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="259" parent="21" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="260" parent="21" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="261" parent="21" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="262" parent="21" name="medical_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="263" parent="21" name="national_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="264" parent="21" name="medic_type_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="265" parent="21" name="status">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="266" parent="21" name="FK_jgo75bg491vdgabq35348e6a6">
+        <columns>medic_type_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="267" parent="21" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="268" parent="21" name="FK_jgo75bg491vdgabq35348e6a6">
+        <columns>medic_type_id</columns>
+        <ref-key>~.medic_types.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="269" parent="22" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="270" parent="22" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="271" parent="22" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="272" parent="22" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="273" parent="22" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="274" parent="22" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="275" parent="22" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="276" parent="22" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="277" parent="22" name="carrier_email">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="278" parent="22" name="carrier_location">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="279" parent="22" name="carrier_name">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="280" parent="22" name="carrier_pay_bill_no">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="281" parent="22" name="carrier_phonenumber">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="282" parent="22" name="carrier_plan">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="283" parent="22" name="carrier_price">
+        <data-type>double</data-type>
+      </column>
+      <column id="284" parent="22" name="carrier_residential_name">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="285" parent="22" name="carrier_street_address">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="286" parent="22" name="carrier_transaction_code">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="287" parent="22" name="customer_email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="288" parent="22" name="customer_firstname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="289" parent="22" name="customer_lastname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="290" parent="22" name="customer_location">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="291" parent="22" name="customer_phonenumber">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="292" parent="22" name="customer_residential_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="293" parent="22" name="customer_street_address">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="294" parent="22" name="invoiceNo">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="295" parent="22" name="product_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="296" parent="22" name="product_price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="297" parent="22" name="product_quantity">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="298" parent="22" name="product_total_price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="299" parent="22" name="product_UUID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="300" parent="22" name="retailer_email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="301" parent="22" name="retailer_location">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="302" parent="22" name="retailer_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="303" parent="22" name="retailer_pay_bill_no">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="304" parent="22" name="retailer_phonenumber">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="305" parent="22" name="retailer_residential_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="306" parent="22" name="retailer_street_address">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="307" parent="22" name="retailer_transaction_code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="308" parent="22" name="order_status">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="309" parent="22" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="310" parent="23" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="311" parent="23" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="312" parent="23" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="313" parent="23" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="314" parent="23" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="315" parent="23" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="316" parent="23" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="317" parent="23" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="318" parent="23" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="319" parent="23" name="firstname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="320" parent="23" name="idNumber">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="321" parent="23" name="lastname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="322" parent="23" name="phoneNumber">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="323" parent="23" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="324" parent="24" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="325" parent="24" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="326" parent="24" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="327" parent="24" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="328" parent="24" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="329" parent="24" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="330" parent="24" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="331" parent="24" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="332" parent="24" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="333" parent="24" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="334" parent="24" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="335" parent="25" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="336" parent="25" name="dosageForm">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="337" parent="25" name="duration">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="338" parent="25" name="frequency_per_day">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="339" parent="25" name="frequencyQuantity">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="340" parent="25" name="note">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="341" parent="25" name="unit">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="342" parent="25" name="inn_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="343" parent="25" name="prescription_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="344" parent="25" name="type">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="345" parent="25" name="product_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="346" parent="25" name="FK_1q7jvcjieyu4k8hrx6ephafa2">
+        <columns>product_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="347" parent="25" name="FK_bfppwvq4yuql4tr24dll05cm9">
+        <columns>inn_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="348" parent="25" name="FK_dah2om7b2m5abs84r4kkbjodm">
+        <columns>prescription_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="349" parent="25" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="350" parent="25" name="FK_1q7jvcjieyu4k8hrx6ephafa2">
+        <columns>product_id</columns>
+        <ref-key>~.products.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="351" parent="25" name="FK_bfppwvq4yuql4tr24dll05cm9">
+        <columns>inn_id</columns>
+        <ref-key>~.inns.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="352" parent="25" name="FK_dah2om7b2m5abs84r4kkbjodm">
+        <columns>prescription_id</columns>
+        <ref-key>~.prescriptions.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="353" parent="26" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="354" parent="26" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="355" parent="26" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="356" parent="26" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="357" parent="26" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="358" parent="26" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="359" parent="26" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="360" parent="26" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="361" parent="26" name="code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="362" parent="26" name="dispensed">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="363" parent="26" name="sent">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="364" parent="26" name="medic_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="365" parent="26" name="patient_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="366" parent="26" name="FK_cio8w8yg2jgr7iu0ggwixyro9">
+        <columns>medic_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="367" parent="26" name="FK_gy09blmpstdyqc8co5ms8evxl">
+        <columns>patient_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="368" parent="26" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="369" parent="26" name="FK_cio8w8yg2jgr7iu0ggwixyro9">
+        <columns>medic_id</columns>
+        <ref-key>~.medics.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="370" parent="26" name="FK_gy09blmpstdyqc8co5ms8evxl">
+        <columns>patient_id</columns>
+        <ref-key>~.patients.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="371" parent="27" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="372" parent="27" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="373" parent="27" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="374" parent="27" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="375" parent="27" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="376" parent="27" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="377" parent="27" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="378" parent="27" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="379" parent="27" name="UUID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="380" parent="27" name="description">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="381" parent="27" name="height">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="382" parent="27" name="length">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="383" parent="27" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="384" parent="27" name="price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="385" parent="27" name="weight">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="386" parent="27" name="width">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="387" parent="27" name="category_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="388" parent="27" name="inn_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="389" parent="27" name="manufacturer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="390" parent="27" name="image_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="391" parent="27" name="FK_aox0mf8fyerjsh7u4evl70r5e">
+        <columns>image_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="392" parent="27" name="FK_ki1sdips1y11qrroufeu823o3">
+        <columns>inn_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="393" parent="27" name="FK_nsskl85cgv135wkg0354xf09k">
+        <columns>manufacturer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="394" parent="27" name="FK_of5oeawsy50x878ic9tyapdnv">
+        <columns>category_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="395" parent="27" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="396" parent="27" name="FK_aox0mf8fyerjsh7u4evl70r5e">
+        <columns>image_id</columns>
+        <ref-key>~.images.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="397" parent="27" name="FK_ki1sdips1y11qrroufeu823o3">
+        <columns>inn_id</columns>
+        <ref-key>~.inns.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="398" parent="27" name="FK_nsskl85cgv135wkg0354xf09k">
+        <columns>manufacturer_id</columns>
+        <ref-key>~.manufacturers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="399" parent="27" name="FK_of5oeawsy50x878ic9tyapdnv">
+        <columns>category_id</columns>
+        <ref-key>~.categories.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="400" parent="28" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="401" parent="28" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="402" parent="28" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="403" parent="28" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="404" parent="28" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="405" parent="28" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="406" parent="28" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="407" parent="28" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="408" parent="28" name="description">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="409" parent="28" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="410" parent="28" name="pay_bill_no">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="411" parent="28" name="pharmacist">
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="412" parent="28" name="address_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="413" parent="28" name="image_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="414" parent="28" name="retailer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="415" parent="28" name="FK_c78ka2cv0yg0m28trefwm4sps">
+        <columns>retailer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="416" parent="28" name="FK_gegiraanr66sfwsj1ntreyo9n">
+        <columns>image_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="417" parent="28" name="FK_tju58u56i0ckx04pj8bog7ek6">
+        <columns>address_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="418" parent="28" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="419" parent="28" name="FK_c78ka2cv0yg0m28trefwm4sps">
+        <columns>retailer_id</columns>
+        <ref-key>PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="420" parent="28" name="FK_gegiraanr66sfwsj1ntreyo9n">
+        <columns>image_id</columns>
+        <ref-key>~.images.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="421" parent="28" name="FK_tju58u56i0ckx04pj8bog7ek6">
+        <columns>address_id</columns>
+        <ref-key>~.addresses.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="422" parent="29" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="423" parent="29" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="424" parent="29" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="425" parent="29" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="426" parent="29" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="427" parent="29" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="428" parent="29" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="429" parent="29" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="430" parent="29" name="price">
+        <data-type>double</data-type>
+      </column>
+      <column id="431" parent="29" name="quantity">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="432" parent="29" name="inn_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="433" parent="29" name="product_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="434" parent="29" name="retailer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="435" parent="29" name="FK_beup04vvqpoi7pqbng9e5kcgi">
+        <columns>retailer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="436" parent="29" name="FK_gybhpxdb5rabsib55hebmonjl">
+        <columns>inn_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="437" parent="29" name="FK_htp625bmmsb6gay567r5sdfoc">
+        <columns>product_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="438" parent="29" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="439" parent="29" name="FK_beup04vvqpoi7pqbng9e5kcgi">
+        <columns>retailer_id</columns>
+        <ref-key>~.retailers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="440" parent="29" name="FK_gybhpxdb5rabsib55hebmonjl">
+        <columns>inn_id</columns>
+        <ref-key>~.inns.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="441" parent="29" name="FK_htp625bmmsb6gay567r5sdfoc">
+        <columns>product_id</columns>
+        <ref-key>~.products.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="442" parent="30" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="443" parent="30" name="permission_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="444" parent="30" name="FK_5ib985w6v1ypdavkghvx12xsc">
+        <columns>permission_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="445" parent="30" name="PRIMARY">
+        <columns>user_id
+permission_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="446" parent="30" name="FK_525n7wn9ejoa648m26bm4rhtt">
+        <columns>user_id</columns>
+        <ref-key>~.users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="447" parent="30" name="FK_5ib985w6v1ypdavkghvx12xsc">
+        <columns>permission_id</columns>
+        <ref-key>~.permissions.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="448" parent="31" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="449" parent="31" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="450" parent="31" name="created_on">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="451" parent="31" name="deleted_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="452" parent="31" name="deleted_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="453" parent="31" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="454" parent="31" name="updated_by">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="455" parent="31" name="updated_on">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="456" parent="31" name="firstname">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="457" parent="31" name="forgotPasswordRequest">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="458" parent="31" name="lastname">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="459" parent="31" name="password">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="460" parent="31" name="primary_address_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="461" parent="31" name="affiliate_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="462" parent="31" name="customer_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="463" parent="31" name="medic_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="464" parent="31" name="FK_1456pqkjnjfuhpgej6np389k2">
+        <columns>affiliate_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="465" parent="31" name="FK_72efjd5u3nqtjdduip5wwvd39">
+        <columns>customer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="466" parent="31" name="FK_9ryj23hiktc11cpsidjiprd6c">
+        <columns>primary_address_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="467" parent="31" name="FK_q7hr23qjdt1yljqt5hg49v1rn">
+        <columns>medic_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="468" parent="31" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="469" parent="31" name="FK_1456pqkjnjfuhpgej6np389k2">
+        <columns>affiliate_id</columns>
+        <ref-key>~.affiliates.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="470" parent="31" name="FK_72efjd5u3nqtjdduip5wwvd39">
+        <columns>customer_id</columns>
+        <ref-key>~.customers.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="471" parent="31" name="FK_9ryj23hiktc11cpsidjiprd6c">
+        <columns>primary_address_id</columns>
+        <ref-key>~.addresses.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="472" parent="31" name="FK_q7hr23qjdt1yljqt5hg49v1rn">
+        <columns>medic_id</columns>
+        <ref-key>~.medics.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>

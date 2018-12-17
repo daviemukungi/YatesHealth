@@ -1,0 +1,1317 @@
+/* This file creates and combines all of the AdminForm color skins.
+ * To minimize file size, we recommended using only one or two skins.
+ * However, we have provided this file as it proves useful for demonstrating
+ * all of skins or for enabling true multi-skin support. 
+ */
+.admin-form .panel-primary > .panel-heading {
+  border-top-color: #4668fe;
+}
+.admin-form .panel-primary > .panel-heading:before {
+  background-color: #304ffe;
+}
+.admin-form .panel-primary.heading-border:before,
+.admin-form .panel-primary .heading-border:before {
+  background-color: #304ffe;
+}
+.admin-form .bg-primary {
+  background-color: #304ffe;
+}
+.admin-form .bg-primary.light {
+  background-color: #4668fe;
+}
+.admin-form .bg-primary.lighter {
+  background-color: #4b7ffe;
+}
+.admin-form .bg-primary.dark {
+  background-color: #3047d1;
+}
+.admin-form .bg-primary.darker {
+  background-color: #1d31a2;
+}
+.admin-form .option-primary input:hover + .checkbox,
+.admin-form .option-primary input:hover + .radio {
+  border-color: #4668fe;
+}
+.admin-form .option-primary input:checked + .checkbox,
+.admin-form .option-primary input:focus + .checkbox,
+.admin-form .option-primary input:checked + .radio,
+.admin-form .option-primary input:focus + .radio {
+  border-color: #304ffe;
+}
+.admin-form .option-primary input:checked + .radio:before,
+.admin-form .option-primary input:focus + .radio:before {
+  background: #304ffe;
+}
+.admin-form .option-primary input:checked + .checkbox:before,
+.admin-form .option-primary input:focus + .checkbox:before {
+  border-color: #304ffe;
+}
+.admin-form .switch-primary > input:checked + label {
+  background: #304ffe;
+  border-color: #304ffe;
+}
+.admin-form .switch-primary > input:checked + label:after {
+  color: #304ffe;
+}
+.admin-form .switch-primary > input:checked:focus + label {
+  background: #3047d1;
+  border-color: #3047d1;
+}
+.admin-form .btn-primary {
+  background-color: #304ffe;
+}
+.admin-form .btn-primary:hover,
+.admin-form .btn-primary:focus {
+  background-color: #4668fe;
+  border-color: #4668fe;
+}
+.admin-form .btn-primary:active {
+  background-color: #3047d1;
+}
+.admin-form .btn-primary,
+.admin-form .btn-primary:hover,
+.admin-form .btn-primary:focus,
+.admin-form .btn-primary:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.admin-form .slider-wrapper.slider-primary .ui-slider .ui-slider-range {
+  background-color: #304ffe;
+}
+.admin-form .slider-wrapper.slider-primary .ui-slider .ui-slider-handle {
+  border-color: #304ffe;
+}
+.admin-form .slider-wrapper.slider-primary .ui-slider .ui-slider-handle:before {
+  background-color: #304ffe;
+}
+.admin-form.theme-primary .section-divider span {
+  color: #304ffe;
+}
+.admin-form.theme-primary .tagline span {
+  color: #304ffe;
+}
+.admin-form.theme-primary .theme-link {
+  color: #304ffe;
+}
+.admin-form.theme-primary .gui-input:hover,
+.admin-form.theme-primary .gui-textarea:hover,
+.admin-form.theme-primary .select > select:hover,
+.admin-form.theme-primary .select-multiple select:hover,
+.admin-form.theme-primary .gui-input:hover ~ .input-footer,
+.admin-form.theme-primary .file .gui-file:hover + .gui-input,
+.admin-form.theme-primary .gui-textarea:hover ~ .input-footer {
+  border-color: #4668fe;
+}
+.admin-form.theme-primary .gui-input:focus,
+.admin-form.theme-primary .gui-textarea:focus,
+.admin-form.theme-primary .select > select:focus,
+.admin-form.theme-primary .select-multiple select:focus {
+  border-color: #4668fe;
+  color: #3C3C3C;
+}
+.admin-form.theme-primary .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-primary .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-primary .gui-input:focus ~ .field-icon i,
+.admin-form.theme-primary .gui-textarea:focus ~ .field-icon i {
+  color: #304ffe;
+}
+.admin-form.theme-primary .select-multiple select:focus,
+.admin-form.theme-primary .gui-input:focus ~ .input-footer,
+.admin-form.theme-primary .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-primary .file .gui-file:focus + .gui-input {
+  border-color: #4668fe;
+}
+.admin-form.theme-primary .select > select:focus + .arrow {
+  color: #304ffe;
+}
+.admin-form.theme-primary .rating:hover .rating-star:hover,
+.admin-form.theme-primary .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-primary .rating-input:checked ~ .rating-star {
+  color: #304ffe;
+}
+.admin-form.theme-primary .rating-star,
+.admin-form.theme-primary .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-primary .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-primary .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-primary .ui-datepicker .ui-datepicker-title {
+  color: #304ffe;
+}
+.admin-form.theme-primary .ui-datepicker-today a,
+.admin-form.theme-primary .ui-datepicker-today a:hover,
+.admin-form.theme-primary .ui-datepicker .ui-state-highlight {
+  background: #96a5fe !important;
+}
+.admin-form.theme-primary .ui-datepicker .ui-state-active {
+  background: #304ffe !important;
+}
+.admin-form.theme-primary .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-primary .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #304ffe;
+}
+.admin-form.theme-primary .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #304ffe;
+}
+.admin-form.theme-primary .wizard .steps li a,
+.admin-form.theme-primary .wizard .actions li a {
+  background-color: #304ffe;
+}
+.admin-form.theme-primary .wizard .steps li.current a {
+  background-color: #3047d1;
+}
+.admin-form .panel-info > .panel-heading {
+  border-top-color: #2ccaff;
+}
+.admin-form .panel-info > .panel-heading:before {
+  background-color: #00b0ff;
+}
+.admin-form .panel-info.heading-border:before,
+.admin-form .panel-info .heading-border:before {
+  background-color: #00b0ff;
+}
+.admin-form .bg-info {
+  background-color: #00b0ff;
+}
+.admin-form .bg-info.light {
+  background-color: #2ccaff;
+}
+.admin-form .bg-info.lighter {
+  background-color: #39d6ff;
+}
+.admin-form .bg-info.dark {
+  background-color: #0074a8;
+}
+.admin-form .bg-info.darker {
+  background-color: #005577;
+}
+.admin-form .option-info input:hover + .checkbox,
+.admin-form .option-info input:hover + .radio {
+  border-color: #2ccaff;
+}
+.admin-form .option-info input:checked + .checkbox,
+.admin-form .option-info input:focus + .checkbox,
+.admin-form .option-info input:checked + .radio,
+.admin-form .option-info input:focus + .radio {
+  border-color: #00b0ff;
+}
+.admin-form .option-info input:checked + .radio:before,
+.admin-form .option-info input:focus + .radio:before {
+  background: #00b0ff;
+}
+.admin-form .option-info input:checked + .checkbox:before,
+.admin-form .option-info input:focus + .checkbox:before {
+  border-color: #00b0ff;
+}
+.admin-form .switch-info > input:checked + label {
+  background: #00b0ff;
+  border-color: #00b0ff;
+}
+.admin-form .switch-info > input:checked + label:after {
+  color: #00b0ff;
+}
+.admin-form .switch-info > input:checked:focus + label {
+  background: #0074a8;
+  border-color: #0074a8;
+}
+.admin-form .btn-info {
+  background-color: #00b0ff;
+}
+.admin-form .btn-info:hover,
+.admin-form .btn-info:focus {
+  background-color: #2ccaff;
+  border-color: #2ccaff;
+}
+.admin-form .btn-info:active {
+  background-color: #0074a8;
+}
+.admin-form .btn-info,
+.admin-form .btn-info:hover,
+.admin-form .btn-info:focus,
+.admin-form .btn-info:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.admin-form .slider-wrapper.slider-info .ui-slider .ui-slider-range {
+  background-color: #00b0ff;
+}
+.admin-form .slider-wrapper.slider-info .ui-slider .ui-slider-handle {
+  border-color: #00b0ff;
+}
+.admin-form .slider-wrapper.slider-info .ui-slider .ui-slider-handle:before {
+  background-color: #00b0ff;
+}
+.admin-form.theme-info .section-divider span {
+  color: #00b0ff;
+}
+.admin-form.theme-info .tagline span {
+  color: #00b0ff;
+}
+.admin-form.theme-info .theme-link {
+  color: #00b0ff;
+}
+.admin-form.theme-info .gui-input:hover,
+.admin-form.theme-info .gui-textarea:hover,
+.admin-form.theme-info .select > select:hover,
+.admin-form.theme-info .select-multiple select:hover,
+.admin-form.theme-info .gui-input:hover ~ .input-footer,
+.admin-form.theme-info .file .gui-file:hover + .gui-input,
+.admin-form.theme-info .gui-textarea:hover ~ .input-footer {
+  border-color: #2ccaff;
+}
+.admin-form.theme-info .gui-input:focus,
+.admin-form.theme-info .gui-textarea:focus,
+.admin-form.theme-info .select > select:focus,
+.admin-form.theme-info .select-multiple select:focus {
+  border-color: #2ccaff;
+  color: #3C3C3C;
+}
+.admin-form.theme-info .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-info .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-info .gui-input:focus ~ .field-icon i,
+.admin-form.theme-info .gui-textarea:focus ~ .field-icon i {
+  color: #00b0ff;
+}
+.admin-form.theme-info .select-multiple select:focus,
+.admin-form.theme-info .gui-input:focus ~ .input-footer,
+.admin-form.theme-info .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-info .file .gui-file:focus + .gui-input {
+  border-color: #2ccaff;
+}
+.admin-form.theme-info .select > select:focus + .arrow {
+  color: #00b0ff;
+}
+.admin-form.theme-info .rating:hover .rating-star:hover,
+.admin-form.theme-info .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-info .rating-input:checked ~ .rating-star {
+  color: #00b0ff;
+}
+.admin-form.theme-info .rating-star,
+.admin-form.theme-info .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-info .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-info .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-info .ui-datepicker .ui-datepicker-title {
+  color: #00b0ff;
+}
+.admin-form.theme-info .ui-datepicker-today a,
+.admin-form.theme-info .ui-datepicker-today a:hover,
+.admin-form.theme-info .ui-datepicker .ui-state-highlight {
+  background: #66d0ff !important;
+}
+.admin-form.theme-info .ui-datepicker .ui-state-active {
+  background: #00b0ff !important;
+}
+.admin-form.theme-info .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-info .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #00b0ff;
+}
+.admin-form.theme-info .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #00b0ff;
+}
+.admin-form.theme-info .wizard .steps li a,
+.admin-form.theme-info .wizard .actions li a {
+  background-color: #00b0ff;
+}
+.admin-form.theme-info .wizard .steps li.current a {
+  background-color: #0074a8;
+}
+.admin-form .panel-success > .panel-heading {
+  border-top-color: #68d192;
+}
+.admin-form .panel-success > .panel-heading:before {
+  background-color: #2ad170;
+}
+.admin-form .panel-success.heading-border:before,
+.admin-form .panel-success .heading-border:before {
+  background-color: #2ad170;
+}
+.admin-form .bg-success {
+  background-color: #2ad170;
+}
+.admin-form .bg-success.light {
+  background-color: #68d192;
+}
+.admin-form .bg-success.lighter {
+  background-color: #86d19e;
+}
+.admin-form .bg-success.dark {
+  background-color: #26a050;
+}
+.admin-form .bg-success.darker {
+  background-color: #18713d;
+}
+.admin-form .option-success input:hover + .checkbox,
+.admin-form .option-success input:hover + .radio {
+  border-color: #68d192;
+}
+.admin-form .option-success input:checked + .checkbox,
+.admin-form .option-success input:focus + .checkbox,
+.admin-form .option-success input:checked + .radio,
+.admin-form .option-success input:focus + .radio {
+  border-color: #2ad170;
+}
+.admin-form .option-success input:checked + .radio:before,
+.admin-form .option-success input:focus + .radio:before {
+  background: #2ad170;
+}
+.admin-form .option-success input:checked + .checkbox:before,
+.admin-form .option-success input:focus + .checkbox:before {
+  border-color: #2ad170;
+}
+.admin-form .switch-success > input:checked + label {
+  background: #2ad170;
+  border-color: #2ad170;
+}
+.admin-form .switch-success > input:checked + label:after {
+  color: #2ad170;
+}
+.admin-form .switch-success > input:checked:focus + label {
+  background: #26a050;
+  border-color: #26a050;
+}
+.admin-form .btn-success {
+  background-color: #2ad170;
+}
+.admin-form .btn-success:hover,
+.admin-form .btn-success:focus {
+  background-color: #68d192;
+  border-color: #68d192;
+}
+.admin-form .btn-success:active {
+  background-color: #26a050;
+}
+.admin-form .btn-success,
+.admin-form .btn-success:hover,
+.admin-form .btn-success:focus,
+.admin-form .btn-success:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.admin-form .slider-wrapper.slider-success .ui-slider .ui-slider-range {
+  background-color: #2ad170;
+}
+.admin-form .slider-wrapper.slider-success .ui-slider .ui-slider-handle {
+  border-color: #2ad170;
+}
+.admin-form .slider-wrapper.slider-success .ui-slider .ui-slider-handle:before {
+  background-color: #2ad170;
+}
+.admin-form.theme-success .section-divider span {
+  color: #2ad170;
+}
+.admin-form.theme-success .tagline span {
+  color: #2ad170;
+}
+.admin-form.theme-success .theme-link {
+  color: #2ad170;
+}
+.admin-form.theme-success .gui-input:hover,
+.admin-form.theme-success .gui-textarea:hover,
+.admin-form.theme-success .select > select:hover,
+.admin-form.theme-success .select-multiple select:hover,
+.admin-form.theme-success .gui-input:hover ~ .input-footer,
+.admin-form.theme-success .file .gui-file:hover + .gui-input,
+.admin-form.theme-success .gui-textarea:hover ~ .input-footer {
+  border-color: #68d192;
+}
+.admin-form.theme-success .gui-input:focus,
+.admin-form.theme-success .gui-textarea:focus,
+.admin-form.theme-success .select > select:focus,
+.admin-form.theme-success .select-multiple select:focus {
+  border-color: #68d192;
+  color: #3C3C3C;
+}
+.admin-form.theme-success .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-success .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-success .gui-input:focus ~ .field-icon i,
+.admin-form.theme-success .gui-textarea:focus ~ .field-icon i {
+  color: #2ad170;
+}
+.admin-form.theme-success .select-multiple select:focus,
+.admin-form.theme-success .gui-input:focus ~ .input-footer,
+.admin-form.theme-success .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-success .file .gui-file:focus + .gui-input {
+  border-color: #68d192;
+}
+.admin-form.theme-success .select > select:focus + .arrow {
+  color: #2ad170;
+}
+.admin-form.theme-success .rating:hover .rating-star:hover,
+.admin-form.theme-success .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-success .rating-input:checked ~ .rating-star {
+  color: #2ad170;
+}
+.admin-form.theme-success .rating-star,
+.admin-form.theme-success .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-success .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-success .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-success .ui-datepicker .ui-datepicker-title {
+  color: #2ad170;
+}
+.admin-form.theme-success .ui-datepicker-today a,
+.admin-form.theme-success .ui-datepicker-today a:hover,
+.admin-form.theme-success .ui-datepicker .ui-state-highlight {
+  background: #7ce5a8 !important;
+}
+.admin-form.theme-success .ui-datepicker .ui-state-active {
+  background: #2ad170 !important;
+}
+.admin-form.theme-success .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-success .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #2ad170;
+}
+.admin-form.theme-success .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #2ad170;
+}
+.admin-form.theme-success .wizard .steps li a,
+.admin-form.theme-success .wizard .actions li a {
+  background-color: #2ad170;
+}
+.admin-form.theme-success .wizard .steps li.current a {
+  background-color: #26a050;
+}
+.admin-form .panel-warning > .panel-heading {
+  border-top-color: #ffb951;
+}
+.admin-form .panel-warning > .panel-heading:before {
+  background-color: #ffa726;
+}
+.admin-form .panel-warning.heading-border:before,
+.admin-form .panel-warning .heading-border:before {
+  background-color: #ffa726;
+}
+.admin-form .bg-warning {
+  background-color: #ffa726;
+}
+.admin-form .bg-warning.light {
+  background-color: #ffb951;
+}
+.admin-form .bg-warning.lighter {
+  background-color: #f9d283;
+}
+.admin-form .bg-warning.dark {
+  background-color: #f39813;
+}
+.admin-form .bg-warning.darker {
+  background-color: #e58800;
+}
+.admin-form .option-warning input:hover + .checkbox,
+.admin-form .option-warning input:hover + .radio {
+  border-color: #ffb951;
+}
+.admin-form .option-warning input:checked + .checkbox,
+.admin-form .option-warning input:focus + .checkbox,
+.admin-form .option-warning input:checked + .radio,
+.admin-form .option-warning input:focus + .radio {
+  border-color: #ffa726;
+}
+.admin-form .option-warning input:checked + .radio:before,
+.admin-form .option-warning input:focus + .radio:before {
+  background: #ffa726;
+}
+.admin-form .option-warning input:checked + .checkbox:before,
+.admin-form .option-warning input:focus + .checkbox:before {
+  border-color: #ffa726;
+}
+.admin-form .switch-warning > input:checked + label {
+  background: #ffa726;
+  border-color: #ffa726;
+}
+.admin-form .switch-warning > input:checked + label:after {
+  color: #ffa726;
+}
+.admin-form .switch-warning > input:checked:focus + label {
+  background: #f39813;
+  border-color: #f39813;
+}
+.admin-form .btn-warning {
+  background-color: #ffa726;
+}
+.admin-form .btn-warning:hover,
+.admin-form .btn-warning:focus {
+  background-color: #ffb951;
+  border-color: #ffb951;
+}
+.admin-form .btn-warning:active {
+  background-color: #f39813;
+}
+.admin-form .btn-warning,
+.admin-form .btn-warning:hover,
+.admin-form .btn-warning:focus,
+.admin-form .btn-warning:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.admin-form .slider-wrapper.slider-warning .ui-slider .ui-slider-range {
+  background-color: #ffa726;
+}
+.admin-form .slider-wrapper.slider-warning .ui-slider .ui-slider-handle {
+  border-color: #ffa726;
+}
+.admin-form .slider-wrapper.slider-warning .ui-slider .ui-slider-handle:before {
+  background-color: #ffa726;
+}
+.admin-form.theme-warning .section-divider span {
+  color: #ffa726;
+}
+.admin-form.theme-warning .tagline span {
+  color: #ffa726;
+}
+.admin-form.theme-warning .theme-link {
+  color: #ffa726;
+}
+.admin-form.theme-warning .gui-input:hover,
+.admin-form.theme-warning .gui-textarea:hover,
+.admin-form.theme-warning .select > select:hover,
+.admin-form.theme-warning .select-multiple select:hover,
+.admin-form.theme-warning .gui-input:hover ~ .input-footer,
+.admin-form.theme-warning .file .gui-file:hover + .gui-input,
+.admin-form.theme-warning .gui-textarea:hover ~ .input-footer {
+  border-color: #ffb951;
+}
+.admin-form.theme-warning .gui-input:focus,
+.admin-form.theme-warning .gui-textarea:focus,
+.admin-form.theme-warning .select > select:focus,
+.admin-form.theme-warning .select-multiple select:focus {
+  border-color: #ffb951;
+  color: #3C3C3C;
+}
+.admin-form.theme-warning .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-warning .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-warning .gui-input:focus ~ .field-icon i,
+.admin-form.theme-warning .gui-textarea:focus ~ .field-icon i {
+  color: #ffa726;
+}
+.admin-form.theme-warning .select-multiple select:focus,
+.admin-form.theme-warning .gui-input:focus ~ .input-footer,
+.admin-form.theme-warning .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-warning .file .gui-file:focus + .gui-input {
+  border-color: #ffb951;
+}
+.admin-form.theme-warning .select > select:focus + .arrow {
+  color: #ffa726;
+}
+.admin-form.theme-warning .rating:hover .rating-star:hover,
+.admin-form.theme-warning .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-warning .rating-input:checked ~ .rating-star {
+  color: #ffa726;
+}
+.admin-form.theme-warning .rating-star,
+.admin-form.theme-warning .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-warning .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-warning .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-warning .ui-datepicker .ui-datepicker-title {
+  color: #ffa726;
+}
+.admin-form.theme-warning .ui-datepicker-today a,
+.admin-form.theme-warning .ui-datepicker-today a:hover,
+.admin-form.theme-warning .ui-datepicker .ui-state-highlight {
+  background: #ffd08c !important;
+}
+.admin-form.theme-warning .ui-datepicker .ui-state-active {
+  background: #ffa726 !important;
+}
+.admin-form.theme-warning .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-warning .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #ffa726;
+}
+.admin-form.theme-warning .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #ffa726;
+}
+.admin-form.theme-warning .wizard .steps li a,
+.admin-form.theme-warning .wizard .actions li a {
+  background-color: #ffa726;
+}
+.admin-form.theme-warning .wizard .steps li.current a {
+  background-color: #f39813;
+}
+.admin-form .panel-danger > .panel-heading {
+  border-top-color: #e57373;
+}
+.admin-form .panel-danger > .panel-heading:before {
+  background-color: #ef5350;
+}
+.admin-form .panel-danger.heading-border:before,
+.admin-form .panel-danger .heading-border:before {
+  background-color: #ef5350;
+}
+.admin-form .bg-danger {
+  background-color: #ef5350;
+}
+.admin-form .bg-danger.light {
+  background-color: #e57373;
+}
+.admin-form .bg-danger.lighter {
+  background-color: #ef9a9a;
+}
+.admin-form .bg-danger.dark {
+  background-color: #e32d2a;
+}
+.admin-form .bg-danger.darker {
+  background-color: #de0e0a;
+}
+.admin-form .option-danger input:hover + .checkbox,
+.admin-form .option-danger input:hover + .radio {
+  border-color: #e57373;
+}
+.admin-form .option-danger input:checked + .checkbox,
+.admin-form .option-danger input:focus + .checkbox,
+.admin-form .option-danger input:checked + .radio,
+.admin-form .option-danger input:focus + .radio {
+  border-color: #ef5350;
+}
+.admin-form .option-danger input:checked + .radio:before,
+.admin-form .option-danger input:focus + .radio:before {
+  background: #ef5350;
+}
+.admin-form .option-danger input:checked + .checkbox:before,
+.admin-form .option-danger input:focus + .checkbox:before {
+  border-color: #ef5350;
+}
+.admin-form .switch-danger > input:checked + label {
+  background: #ef5350;
+  border-color: #ef5350;
+}
+.admin-form .switch-danger > input:checked + label:after {
+  color: #ef5350;
+}
+.admin-form .switch-danger > input:checked:focus + label {
+  background: #e32d2a;
+  border-color: #e32d2a;
+}
+.admin-form .btn-danger {
+  background-color: #ef5350;
+}
+.admin-form .btn-danger:hover,
+.admin-form .btn-danger:focus {
+  background-color: #e57373;
+  border-color: #e57373;
+}
+.admin-form .btn-danger:active {
+  background-color: #e32d2a;
+}
+.admin-form .btn-danger,
+.admin-form .btn-danger:hover,
+.admin-form .btn-danger:focus,
+.admin-form .btn-danger:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.admin-form .slider-wrapper.slider-danger .ui-slider .ui-slider-range {
+  background-color: #ef5350;
+}
+.admin-form .slider-wrapper.slider-danger .ui-slider .ui-slider-handle {
+  border-color: #ef5350;
+}
+.admin-form .slider-wrapper.slider-danger .ui-slider .ui-slider-handle:before {
+  background-color: #ef5350;
+}
+.admin-form.theme-danger .section-divider span {
+  color: #ef5350;
+}
+.admin-form.theme-danger .tagline span {
+  color: #ef5350;
+}
+.admin-form.theme-danger .theme-link {
+  color: #ef5350;
+}
+.admin-form.theme-danger .gui-input:hover,
+.admin-form.theme-danger .gui-textarea:hover,
+.admin-form.theme-danger .select > select:hover,
+.admin-form.theme-danger .select-multiple select:hover,
+.admin-form.theme-danger .gui-input:hover ~ .input-footer,
+.admin-form.theme-danger .file .gui-file:hover + .gui-input,
+.admin-form.theme-danger .gui-textarea:hover ~ .input-footer {
+  border-color: #e57373;
+}
+.admin-form.theme-danger .gui-input:focus,
+.admin-form.theme-danger .gui-textarea:focus,
+.admin-form.theme-danger .select > select:focus,
+.admin-form.theme-danger .select-multiple select:focus {
+  border-color: #e57373;
+  color: #3C3C3C;
+}
+.admin-form.theme-danger .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-danger .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-danger .gui-input:focus ~ .field-icon i,
+.admin-form.theme-danger .gui-textarea:focus ~ .field-icon i {
+  color: #ef5350;
+}
+.admin-form.theme-danger .select-multiple select:focus,
+.admin-form.theme-danger .gui-input:focus ~ .input-footer,
+.admin-form.theme-danger .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-danger .file .gui-file:focus + .gui-input {
+  border-color: #e57373;
+}
+.admin-form.theme-danger .select > select:focus + .arrow {
+  color: #ef5350;
+}
+.admin-form.theme-danger .rating:hover .rating-star:hover,
+.admin-form.theme-danger .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-danger .rating-input:checked ~ .rating-star {
+  color: #ef5350;
+}
+.admin-form.theme-danger .rating-star,
+.admin-form.theme-danger .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-danger .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-danger .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-danger .ui-datepicker .ui-datepicker-title {
+  color: #ef5350;
+}
+.admin-form.theme-danger .ui-datepicker-today a,
+.admin-form.theme-danger .ui-datepicker-today a:hover,
+.admin-form.theme-danger .ui-datepicker .ui-state-highlight {
+  background: #f8afad !important;
+}
+.admin-form.theme-danger .ui-datepicker .ui-state-active {
+  background: #ef5350 !important;
+}
+.admin-form.theme-danger .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-danger .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #ef5350;
+}
+.admin-form.theme-danger .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #ef5350;
+}
+.admin-form.theme-danger .wizard .steps li a,
+.admin-form.theme-danger .wizard .actions li a {
+  background-color: #ef5350;
+}
+.admin-form.theme-danger .wizard .steps li.current a {
+  background-color: #e32d2a;
+}
+.admin-form .panel-alert > .panel-heading {
+  border-top-color: #5834c8;
+}
+.admin-form .panel-alert > .panel-heading:before {
+  background-color: #512da8;
+}
+.admin-form .panel-alert.heading-border:before,
+.admin-form .panel-alert .heading-border:before {
+  background-color: #512da8;
+}
+.admin-form .bg-alert {
+  background-color: #512da8;
+}
+.admin-form .bg-alert.light {
+  background-color: #5834c8;
+}
+.admin-form .bg-alert.lighter {
+  background-color: #6941ed;
+}
+.admin-form .bg-alert.dark {
+  background-color: #3e227b;
+}
+.admin-form .bg-alert.darker {
+  background-color: #221545;
+}
+.admin-form .option-alert input:hover + .checkbox,
+.admin-form .option-alert input:hover + .radio {
+  border-color: #5834c8;
+}
+.admin-form .option-alert input:checked + .checkbox,
+.admin-form .option-alert input:focus + .checkbox,
+.admin-form .option-alert input:checked + .radio,
+.admin-form .option-alert input:focus + .radio {
+  border-color: #512da8;
+}
+.admin-form .option-alert input:checked + .radio:before,
+.admin-form .option-alert input:focus + .radio:before {
+  background: #512da8;
+}
+.admin-form .option-alert input:checked + .checkbox:before,
+.admin-form .option-alert input:focus + .checkbox:before {
+  border-color: #512da8;
+}
+.admin-form .switch-alert > input:checked + label {
+  background: #512da8;
+  border-color: #512da8;
+}
+.admin-form .switch-alert > input:checked + label:after {
+  color: #512da8;
+}
+.admin-form .switch-alert > input:checked:focus + label {
+  background: #3e227b;
+  border-color: #3e227b;
+}
+.admin-form .btn-alert {
+  background-color: #512da8;
+}
+.admin-form .btn-alert:hover,
+.admin-form .btn-alert:focus {
+  background-color: #5834c8;
+  border-color: #5834c8;
+}
+.admin-form .btn-alert:active {
+  background-color: #3e227b;
+}
+.admin-form .btn-alert,
+.admin-form .btn-alert:hover,
+.admin-form .btn-alert:focus,
+.admin-form .btn-alert:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.admin-form .slider-wrapper.slider-alert .ui-slider .ui-slider-range {
+  background-color: #512da8;
+}
+.admin-form .slider-wrapper.slider-alert .ui-slider .ui-slider-handle {
+  border-color: #512da8;
+}
+.admin-form .slider-wrapper.slider-alert .ui-slider .ui-slider-handle:before {
+  background-color: #512da8;
+}
+.admin-form.theme-alert .section-divider span {
+  color: #512da8;
+}
+.admin-form.theme-alert .tagline span {
+  color: #512da8;
+}
+.admin-form.theme-alert .theme-link {
+  color: #512da8;
+}
+.admin-form.theme-alert .gui-input:hover,
+.admin-form.theme-alert .gui-textarea:hover,
+.admin-form.theme-alert .select > select:hover,
+.admin-form.theme-alert .select-multiple select:hover,
+.admin-form.theme-alert .gui-input:hover ~ .input-footer,
+.admin-form.theme-alert .file .gui-file:hover + .gui-input,
+.admin-form.theme-alert .gui-textarea:hover ~ .input-footer {
+  border-color: #5834c8;
+}
+.admin-form.theme-alert .gui-input:focus,
+.admin-form.theme-alert .gui-textarea:focus,
+.admin-form.theme-alert .select > select:focus,
+.admin-form.theme-alert .select-multiple select:focus {
+  border-color: #5834c8;
+  color: #3C3C3C;
+}
+.admin-form.theme-alert .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-alert .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-alert .gui-input:focus ~ .field-icon i,
+.admin-form.theme-alert .gui-textarea:focus ~ .field-icon i {
+  color: #512da8;
+}
+.admin-form.theme-alert .select-multiple select:focus,
+.admin-form.theme-alert .gui-input:focus ~ .input-footer,
+.admin-form.theme-alert .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-alert .file .gui-file:focus + .gui-input {
+  border-color: #5834c8;
+}
+.admin-form.theme-alert .select > select:focus + .arrow {
+  color: #512da8;
+}
+.admin-form.theme-alert .rating:hover .rating-star:hover,
+.admin-form.theme-alert .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-alert .rating-input:checked ~ .rating-star {
+  color: #512da8;
+}
+.admin-form.theme-alert .rating-star,
+.admin-form.theme-alert .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-alert .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-alert .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-alert .ui-datepicker .ui-datepicker-title {
+  color: #512da8;
+}
+.admin-form.theme-alert .ui-datepicker-today a,
+.admin-form.theme-alert .ui-datepicker-today a:hover,
+.admin-form.theme-alert .ui-datepicker .ui-state-highlight {
+  background: #8665d6 !important;
+}
+.admin-form.theme-alert .ui-datepicker .ui-state-active {
+  background: #512da8 !important;
+}
+.admin-form.theme-alert .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-alert .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #512da8;
+}
+.admin-form.theme-alert .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #512da8;
+}
+.admin-form.theme-alert .wizard .steps li a,
+.admin-form.theme-alert .wizard .actions li a {
+  background-color: #512da8;
+}
+.admin-form.theme-alert .wizard .steps li.current a {
+  background-color: #3e227b;
+}
+.admin-form .panel-system > .panel-heading {
+  border-top-color: #6d573d;
+}
+.admin-form .panel-system > .panel-heading:before {
+  background-color: #6d4c41;
+}
+.admin-form .panel-system.heading-border:before,
+.admin-form .panel-system .heading-border:before {
+  background-color: #6d4c41;
+}
+.admin-form .bg-system {
+  background-color: #6d4c41;
+}
+.admin-form .bg-system.light {
+  background-color: #6d573d;
+}
+.admin-form .bg-system.lighter {
+  background-color: #6d6053;
+}
+.admin-form .bg-system.dark {
+  background-color: #5b3a2f;
+}
+.admin-form .bg-system.darker {
+  background-color: #452b21;
+}
+.admin-form .option-system input:hover + .checkbox,
+.admin-form .option-system input:hover + .radio {
+  border-color: #6d573d;
+}
+.admin-form .option-system input:checked + .checkbox,
+.admin-form .option-system input:focus + .checkbox,
+.admin-form .option-system input:checked + .radio,
+.admin-form .option-system input:focus + .radio {
+  border-color: #6d4c41;
+}
+.admin-form .option-system input:checked + .radio:before,
+.admin-form .option-system input:focus + .radio:before {
+  background: #6d4c41;
+}
+.admin-form .option-system input:checked + .checkbox:before,
+.admin-form .option-system input:focus + .checkbox:before {
+  border-color: #6d4c41;
+}
+.admin-form .switch-system > input:checked + label {
+  background: #6d4c41;
+  border-color: #6d4c41;
+}
+.admin-form .switch-system > input:checked + label:after {
+  color: #6d4c41;
+}
+.admin-form .switch-system > input:checked:focus + label {
+  background: #5b3a2f;
+  border-color: #5b3a2f;
+}
+.admin-form .btn-system {
+  background-color: #6d4c41;
+}
+.admin-form .btn-system:hover,
+.admin-form .btn-system:focus {
+  background-color: #6d573d;
+  border-color: #6d573d;
+}
+.admin-form .btn-system:active {
+  background-color: #5b3a2f;
+}
+.admin-form .btn-system,
+.admin-form .btn-system:hover,
+.admin-form .btn-system:focus,
+.admin-form .btn-system:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.admin-form .slider-wrapper.slider-system .ui-slider .ui-slider-range {
+  background-color: #6d4c41;
+}
+.admin-form .slider-wrapper.slider-system .ui-slider .ui-slider-handle {
+  border-color: #6d4c41;
+}
+.admin-form .slider-wrapper.slider-system .ui-slider .ui-slider-handle:before {
+  background-color: #6d4c41;
+}
+.admin-form.theme-system .section-divider span {
+  color: #6d4c41;
+}
+.admin-form.theme-system .tagline span {
+  color: #6d4c41;
+}
+.admin-form.theme-system .theme-link {
+  color: #6d4c41;
+}
+.admin-form.theme-system .gui-input:hover,
+.admin-form.theme-system .gui-textarea:hover,
+.admin-form.theme-system .select > select:hover,
+.admin-form.theme-system .select-multiple select:hover,
+.admin-form.theme-system .gui-input:hover ~ .input-footer,
+.admin-form.theme-system .file .gui-file:hover + .gui-input,
+.admin-form.theme-system .gui-textarea:hover ~ .input-footer {
+  border-color: #6d573d;
+}
+.admin-form.theme-system .gui-input:focus,
+.admin-form.theme-system .gui-textarea:focus,
+.admin-form.theme-system .select > select:focus,
+.admin-form.theme-system .select-multiple select:focus {
+  border-color: #6d573d;
+  color: #3C3C3C;
+}
+.admin-form.theme-system .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-system .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-system .gui-input:focus ~ .field-icon i,
+.admin-form.theme-system .gui-textarea:focus ~ .field-icon i {
+  color: #6d4c41;
+}
+.admin-form.theme-system .select-multiple select:focus,
+.admin-form.theme-system .gui-input:focus ~ .input-footer,
+.admin-form.theme-system .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-system .file .gui-file:focus + .gui-input {
+  border-color: #6d573d;
+}
+.admin-form.theme-system .select > select:focus + .arrow {
+  color: #6d4c41;
+}
+.admin-form.theme-system .rating:hover .rating-star:hover,
+.admin-form.theme-system .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-system .rating-input:checked ~ .rating-star {
+  color: #6d4c41;
+}
+.admin-form.theme-system .rating-star,
+.admin-form.theme-system .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-system .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-system .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-system .ui-datepicker .ui-datepicker-title {
+  color: #6d4c41;
+}
+.admin-form.theme-system .ui-datepicker-today a,
+.admin-form.theme-system .ui-datepicker-today a:hover,
+.admin-form.theme-system .ui-datepicker .ui-state-highlight {
+  background: #a87b6c !important;
+}
+.admin-form.theme-system .ui-datepicker .ui-state-active {
+  background: #6d4c41 !important;
+}
+.admin-form.theme-system .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-system .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #6d4c41;
+}
+.admin-form.theme-system .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #6d4c41;
+}
+.admin-form.theme-system .wizard .steps li a,
+.admin-form.theme-system .wizard .actions li a {
+  background-color: #6d4c41;
+}
+.admin-form.theme-system .wizard .steps li.current a {
+  background-color: #5b3a2f;
+}
+.admin-form .panel-dark > .panel-heading {
+  border-top-color: #424759;
+}
+.admin-form .panel-dark > .panel-heading:before {
+  background-color: #3b3f4f;
+}
+.admin-form .panel-dark.heading-border:before,
+.admin-form .panel-dark .heading-border:before {
+  background-color: #3b3f4f;
+}
+.admin-form .bg-dark {
+  background-color: #3b3f4f;
+}
+.admin-form .bg-dark.light {
+  background-color: #424759;
+}
+.admin-form .bg-dark.lighter {
+  background-color: #51566c;
+}
+.admin-form .bg-dark.dark {
+  background-color: #2c2f3c;
+}
+.admin-form .bg-dark.darker {
+  background-color: #1e2028;
+}
+.admin-form .option-dark input:hover + .checkbox,
+.admin-form .option-dark input:hover + .radio {
+  border-color: #424759;
+}
+.admin-form .option-dark input:checked + .checkbox,
+.admin-form .option-dark input:focus + .checkbox,
+.admin-form .option-dark input:checked + .radio,
+.admin-form .option-dark input:focus + .radio {
+  border-color: #3b3f4f;
+}
+.admin-form .option-dark input:checked + .radio:before,
+.admin-form .option-dark input:focus + .radio:before {
+  background: #3b3f4f;
+}
+.admin-form .option-dark input:checked + .checkbox:before,
+.admin-form .option-dark input:focus + .checkbox:before {
+  border-color: #3b3f4f;
+}
+.admin-form .switch-dark > input:checked + label {
+  background: #3b3f4f;
+  border-color: #3b3f4f;
+}
+.admin-form .switch-dark > input:checked + label:after {
+  color: #3b3f4f;
+}
+.admin-form .switch-dark > input:checked:focus + label {
+  background: #2c2f3c;
+  border-color: #2c2f3c;
+}
+.admin-form .btn-dark {
+  background-color: #3b3f4f;
+}
+.admin-form .btn-dark:hover,
+.admin-form .btn-dark:focus {
+  background-color: #424759;
+  border-color: #424759;
+}
+.admin-form .btn-dark:active {
+  background-color: #2c2f3c;
+}
+.admin-form .btn-dark,
+.admin-form .btn-dark:hover,
+.admin-form .btn-dark:focus,
+.admin-form .btn-dark:active {
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+}
+.admin-form .slider-wrapper.slider-dark .ui-slider .ui-slider-range {
+  background-color: #3b3f4f;
+}
+.admin-form .slider-wrapper.slider-dark .ui-slider .ui-slider-handle {
+  border-color: #3b3f4f;
+}
+.admin-form .slider-wrapper.slider-dark .ui-slider .ui-slider-handle:before {
+  background-color: #3b3f4f;
+}
+.admin-form.theme-dark .section-divider span {
+  color: #3b3f4f;
+}
+.admin-form.theme-dark .tagline span {
+  color: #3b3f4f;
+}
+.admin-form.theme-dark .theme-link {
+  color: #3b3f4f;
+}
+.admin-form.theme-dark .gui-input:hover,
+.admin-form.theme-dark .gui-textarea:hover,
+.admin-form.theme-dark .select > select:hover,
+.admin-form.theme-dark .select-multiple select:hover,
+.admin-form.theme-dark .gui-input:hover ~ .input-footer,
+.admin-form.theme-dark .file .gui-file:hover + .gui-input,
+.admin-form.theme-dark .gui-textarea:hover ~ .input-footer {
+  border-color: #424759;
+}
+.admin-form.theme-dark .gui-input:focus,
+.admin-form.theme-dark .gui-textarea:focus,
+.admin-form.theme-dark .select > select:focus,
+.admin-form.theme-dark .select-multiple select:focus {
+  border-color: #424759;
+  color: #3C3C3C;
+}
+.admin-form.theme-dark .gui-textarea:focus {
+  height: 120px;
+}
+.admin-form.theme-dark .select > select:focus {
+  z-index: 10;
+  z-index: 20\9;
+}
+.admin-form.theme-dark .gui-input:focus ~ .field-icon i,
+.admin-form.theme-dark .gui-textarea:focus ~ .field-icon i {
+  color: #3b3f4f;
+}
+.admin-form.theme-dark .select-multiple select:focus,
+.admin-form.theme-dark .gui-input:focus ~ .input-footer,
+.admin-form.theme-dark .gui-textarea:focus ~ .input-footer,
+.admin-form.theme-dark .file .gui-file:focus + .gui-input {
+  border-color: #424759;
+}
+.admin-form.theme-dark .select > select:focus + .arrow {
+  color: #3b3f4f;
+}
+.admin-form.theme-dark .rating:hover .rating-star:hover,
+.admin-form.theme-dark .rating:hover .rating-star:hover ~ .rating-star,
+.admin-form.theme-dark .rating-input:checked ~ .rating-star {
+  color: #3b3f4f;
+}
+.admin-form.theme-dark .rating-star,
+.admin-form.theme-dark .rating:hover .rating-star {
+  color: #A2A6A8;
+}
+.admin-form.theme-dark .ui-datepicker .ui-datepicker-prev,
+.admin-form.theme-dark .ui-datepicker .ui-datepicker-next,
+.admin-form.theme-dark .ui-datepicker .ui-datepicker-title {
+  color: #3b3f4f;
+}
+.admin-form.theme-dark .ui-datepicker-today a,
+.admin-form.theme-dark .ui-datepicker-today a:hover,
+.admin-form.theme-dark .ui-datepicker .ui-state-highlight {
+  background: #676e89 !important;
+}
+.admin-form.theme-dark .ui-datepicker .ui-state-active {
+  background: #3b3f4f !important;
+}
+.admin-form.theme-dark .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle.ui-state-active {
+  background: #FFF !important;
+}
+.admin-form.theme-dark .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle {
+  border-color: #3b3f4f;
+}
+.admin-form.theme-dark .ui-datepicker .ui-timepicker-div .ui-slider .ui-slider-handle:before {
+  background-color: #3b3f4f;
+}
+.admin-form.theme-dark .wizard .steps li a,
+.admin-form.theme-dark .wizard .actions li a {
+  background-color: #3b3f4f;
+}
+.admin-form.theme-dark .wizard .steps li.current a {
+  background-color: #2c2f3c;
+}
